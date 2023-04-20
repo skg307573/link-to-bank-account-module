@@ -1,0 +1,44 @@
+<div class="container mtp">
+  <mat-card>
+    <div class="input-group">
+      <span class="input-group-prepend">
+        <div class="input-group-text bg-transparent border-right-0">
+          <i class="fa fa-search"></i>
+        </div>
+      </span>
+      <input type="search" name="search" placeholder="Search bank name" class="form-control py-2 border-left-0 border"
+        id="example-search-input" [(ngModel)]="filterargs" />
+    </div>
+    <br>
+    <ul class="list-group list-group-horizontal logo_list">
+      <li class="list-group-item" *ngFor="let data of selectedBanks">
+        <div class="wrapper">
+          <div class="content">
+            <img src="{{data.logo}}" width="50" height="50">
+            <a href="javascript:void()" (click)="removeSelectedBank(data);"><i class="fa fa-remove"></i></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p class="text-center">
+      {{banks.selectedOptions.selected.length?"":"No Bank is selected"}}
+    </p>
+    <div class="rsp-higt">
+      <!-- <mat-card> -->
+      <mat-selection-list color="primary" #banks [(ngModel)]="selectedBanks">
+        <mat-list-option *ngFor="let bank of typeofBank| custom:filterargs:'bank_name'" [value]="bank">
+          <img matListAvatar src="{{bank.logo}}" alt="{{bank.bank_name}}">
+          {{bank.bank_name}}
+          <hr/>
+        </mat-list-option>
+      </mat-selection-list>
+      <!-- </mat-card> -->
+     
+
+    </div>
+  </mat-card>
+  <div class="text-center mtp">
+    <button mat-raised-button color="primary" (click)="proceedToNxtPage()">Proceed</button>
+  </div>
+
+</div>

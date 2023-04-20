@@ -1,0 +1,42 @@
+.mtp {
+  margin-top: 1%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  width: max-content
+}
+
+.content img {
+  display: block;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+}
+
+.content .fa-remove {
+  position: absolute;
+  top: 1px;
+  right: -3px;
+  border-radius: 5px;
+  background-color: #ffff;
+  color: black;
+  font-size: 12px;
+}
+
+.list-group-item {
+  border: 0px;
+}
+
+.rsp-higt{
+  max-height: 345px;
+  overflow: auto;
+}
+
+.logo_list{
+  overflow: auto;
+}

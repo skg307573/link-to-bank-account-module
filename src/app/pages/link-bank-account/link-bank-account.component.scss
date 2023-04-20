@@ -1,0 +1,19 @@
+.mtp {
+  margin-top: 2%;
+}
+
+.modal.fade:not(.in).bottom .modal-dialog {
+  -webkit-transform: translate3d(0, 125%, 0) !important;
+  transform: translate3d(0, 125%, 0) !important;
+}
+
+.wdth {
+  width: 100% !important;
+}
+.rsp-higt{
+  max-height: 441px;
+  overflow: auto;
+}
+.border-btm{
+  border-bottom: 1px solid #eeeeee;
+}
